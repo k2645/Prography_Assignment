@@ -64,7 +64,6 @@
 				A8A7E0782B67918A00D015E5 /* Assets.xcassets */,
 				A8A7E07A2B67918A00D015E5 /* LaunchScreen.storyboard */,
 				A8A7E07D2B67918A00D015E5 /* Info.plist */,
-				A8A7E0832B67A1F900D015E5 /* TabBarController.swift */,
 			);
 			path = PrographyAssignment;
 			sourceTree = "<group>";
@@ -72,6 +71,7 @@
 		A8A7E0872B67A6EB00D015E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A8A7E0832B67A1F900D015E5 /* TabBarController.swift */,
 				A8A7E0732B67918900D015E5 /* HomeViewController.swift */,
 				A8A7E0852B67A28C00D015E5 /* CardViewController.swift */,
 			);
