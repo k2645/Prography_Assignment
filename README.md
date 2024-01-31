@@ -15,4 +15,5 @@
 ## Unsplash API 연동
 
 ### Trouble Shooting
+- Unsplash client_id를 추가하고 커밋 푸시를 하는 과정에서 client_id를 담은 secret파일이 gitignore에 추가했음에도 repository에 올라가는 이슈가 발생하였다.
 - JSON Parsing을 하는 과정에서 Decoding이 되지 않는 이슈가 발생하였다.
