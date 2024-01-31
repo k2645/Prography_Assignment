@@ -17,3 +17,13 @@
 ### Trouble Shooting
 - Unsplash client_id를 추가하고 커밋 푸시를 하는 과정에서 client_id를 담은 secret파일이 gitignore에 추가했음에도 repository에 올라가는 이슈가 발생하였다.
 - JSON Parsing을 하는 과정에서 Decoding이 되지 않는 이슈가 발생하였다.
+
+## CocoaPods를 사용하여 RxSwift, RxCocoa 설치
+
+### Trouble Shooting
+1. 다음 같은 에러 발생
+![image](https://github.com/k2645/Prography_Assignment/assets/62226667/0417857d-bcd2-4051-909f-81c9838b253d)
+- Project - Configurations - Debug/Release 재설정
+2. 위 에러를 해결한 후 위와 같은 에러 발생
+![image](https://github.com/k2645/Prography_Assignment/assets/62226667/3d5bd3e6-1444-4a90-aa9a-0b6c37e40627)
+- Target - Build Settings - Build Options - User Script Sandboxing - No로 설정
