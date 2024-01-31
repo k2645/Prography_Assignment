@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A833676F2B6A1B7700E0A844 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */; };
-		A83367712B6A219300E0A844 /* UnsplashDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367702B6A219300E0A844 /* UnsplashDTO.swift */; };
+		A83367712B6A219300E0A844 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367702B6A219300E0A844 /* Photo.swift */; };
 		A83367752B6A2D2600E0A844 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367742B6A2D2600E0A844 /* APIKeys.swift */; };
 		A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E06F2B67918900D015E5 /* AppDelegate.swift */; };
 		A8A7E0722B67918900D015E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0712B67918900D015E5 /* SceneDelegate.swift */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
-		A83367702B6A219300E0A844 /* UnsplashDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashDTO.swift; sourceTree = "<group>"; };
+		A83367702B6A219300E0A844 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		A83367732B6A2AD700E0A844 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		A83367742B6A2D2600E0A844 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		A8A7E06C2B67918900D015E5 /* PrographyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrographyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +50,36 @@
 			isa = PBXGroup;
 			children = (
 				A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */,
-				A83367702B6A219300E0A844 /* UnsplashDTO.swift */,
 				A83367742B6A2D2600E0A844 /* APIKeys.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A83367792B6A43A700E0A844 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A83367702B6A219300E0A844 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A833677A2B6A43D500E0A844 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A8A7E06F2B67918900D015E5 /* AppDelegate.swift */,
+				A8A7E0712B67918900D015E5 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A833677B2B6A43F000E0A844 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A8A7E0782B67918A00D015E5 /* Assets.xcassets */,
+				A8A7E07A2B67918A00D015E5 /* LaunchScreen.storyboard */,
+				A8A7E07D2B67918A00D015E5 /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		A8A7E0632B67918800D015E5 = {
@@ -76,13 +102,11 @@
 		A8A7E06E2B67918900D015E5 /* PrographyAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A83367792B6A43A700E0A844 /* Model */,
 				A833676D2B69FE5100E0A844 /* Network */,
 				A8A7E0872B67A6EB00D015E5 /* View */,
-				A8A7E06F2B67918900D015E5 /* AppDelegate.swift */,
-				A8A7E0712B67918900D015E5 /* SceneDelegate.swift */,
-				A8A7E0782B67918A00D015E5 /* Assets.xcassets */,
-				A8A7E07A2B67918A00D015E5 /* LaunchScreen.storyboard */,
-				A8A7E07D2B67918A00D015E5 /* Info.plist */,
+				A833677B2B6A43F000E0A844 /* Resource */,
+				A833677A2B6A43D500E0A844 /* Application */,
 			);
 			path = PrographyAssignment;
 			sourceTree = "<group>";
@@ -172,7 +196,7 @@
 				A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */,
 				A8A7E0862B67A28C00D015E5 /* CardViewController.swift in Sources */,
 				A833676F2B6A1B7700E0A844 /* UnsplashAPI.swift in Sources */,
-				A83367712B6A219300E0A844 /* UnsplashDTO.swift in Sources */,
+				A83367712B6A219300E0A844 /* Photo.swift in Sources */,
 				A83367752B6A2D2600E0A844 /* APIKeys.swift in Sources */,
 				A8A7E0722B67918900D015E5 /* SceneDelegate.swift in Sources */,
 			);
@@ -321,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MMM58CZBQF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrographyAssignment/Info.plist;
+				INFOPLIST_FILE = PrographyAssignment/Resource/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -350,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MMM58CZBQF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrographyAssignment/Info.plist;
+				INFOPLIST_FILE = PrographyAssignment/Resource/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
