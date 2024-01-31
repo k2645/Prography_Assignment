@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2760D6F2EC8B09376B607EC8 /* Pods_PrographyAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */; };
 		A833676F2B6A1B7700E0A844 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */; };
 		A83367712B6A219300E0A844 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367702B6A219300E0A844 /* Photo.swift */; };
 		A83367752B6A2D2600E0A844 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367742B6A2D2600E0A844 /* APIKeys.swift */; };
@@ -19,11 +18,12 @@
 		A8A7E07C2B67918A00D015E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A7E07A2B67918A00D015E5 /* LaunchScreen.storyboard */; };
 		A8A7E0842B67A1F900D015E5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0832B67A1F900D015E5 /* TabBarController.swift */; };
 		A8A7E0862B67A28C00D015E5 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0852B67A28C00D015E5 /* CardViewController.swift */; };
+		E3DA9D1D20709952A7E7443D /* Pods_PrographyAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A8D3FD63496D181FCB87AB /* Pods_PrographyAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2022FBB8CC3DBD5BEC3FAD08 /* Pods-PrographyAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.debug.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.debug.xcconfig"; sourceTree = "<group>"; };
-		3A5B70C9FDEC50D7741FC7D1 /* Pods-PrographyAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.release.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		1C081A640E22984A63C1A112 /* Pods-PrographyAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.debug.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		A04FA542D0E9088E9444D3A0 /* Pods-PrographyAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.release.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		A83367702B6A219300E0A844 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		A83367732B6A2AD700E0A844 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		A8A7E07D2B67918A00D015E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8A7E0832B67A1F900D015E5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A8A7E0852B67A28C00D015E5 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrographyAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A8D3FD63496D181FCB87AB /* Pods_PrographyAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrographyAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,31 +46,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2760D6F2EC8B09376B607EC8 /* Pods_PrographyAssignment.framework in Frameworks */,
+				E3DA9D1D20709952A7E7443D /* Pods_PrographyAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3099686DF543D8CB7537ACED /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7A636C5C0EA47DA2F0A38E39 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2022FBB8CC3DBD5BEC3FAD08 /* Pods-PrographyAssignment.debug.xcconfig */,
-				3A5B70C9FDEC50D7741FC7D1 /* Pods-PrographyAssignment.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A833676D2B69FE5100E0A844 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +103,8 @@
 				A83367732B6A2AD700E0A844 /* Secret.xcconfig */,
 				A8A7E06E2B67918900D015E5 /* PrographyAssignment */,
 				A8A7E06D2B67918900D015E5 /* Products */,
-				7A636C5C0EA47DA2F0A38E39 /* Pods */,
-				3099686DF543D8CB7537ACED /* Frameworks */,
+				F4BF6FEC7224C322276EA197 /* Pods */,
+				B6B1A01F6E3CDC73C24E828D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +139,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B6B1A01F6E3CDC73C24E828D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2A8D3FD63496D181FCB87AB /* Pods_PrographyAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4BF6FEC7224C322276EA197 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C081A640E22984A63C1A112 /* Pods-PrographyAssignment.debug.xcconfig */,
+				A04FA542D0E9088E9444D3A0 /* Pods-PrographyAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,11 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A7E0802B67918A00D015E5 /* Build configuration list for PBXNativeTarget "PrographyAssignment" */;
 			buildPhases = (
-				5C84E5DF8BF20934159EE621 /* [CP] Check Pods Manifest.lock */,
+				0B58474F7CC8B2218877EAD6 /* [CP] Check Pods Manifest.lock */,
 				A8A7E0682B67918900D015E5 /* Sources */,
 				A8A7E0692B67918900D015E5 /* Frameworks */,
 				A8A7E06A2B67918900D015E5 /* Resources */,
-				A76D578EC14638D9C236C619 /* [CP] Embed Pods Frameworks */,
+				5675E4DF3687F0F60FD5866D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,7 +224,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C84E5DF8BF20934159EE621 /* [CP] Check Pods Manifest.lock */ = {
+		0B58474F7CC8B2218877EAD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,7 +246,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A76D578EC14638D9C236C619 /* [CP] Embed Pods Frameworks */ = {
+		5675E4DF3687F0F60FD5866D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
