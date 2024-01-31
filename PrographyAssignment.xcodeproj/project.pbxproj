@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2760D6F2EC8B09376B607EC8 /* Pods_PrographyAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */; };
 		A833676F2B6A1B7700E0A844 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */; };
 		A83367712B6A219300E0A844 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367702B6A219300E0A844 /* Photo.swift */; };
 		A83367752B6A2D2600E0A844 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367742B6A2D2600E0A844 /* APIKeys.swift */; };
+		A833677E2B6A49B900E0A844 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833677D2B6A49B900E0A844 /* HomeViewModel.swift */; };
 		A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E06F2B67918900D015E5 /* AppDelegate.swift */; };
 		A8A7E0722B67918900D015E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0712B67918900D015E5 /* SceneDelegate.swift */; };
 		A8A7E0742B67918900D015E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0732B67918900D015E5 /* HomeViewController.swift */; };
@@ -20,10 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2022FBB8CC3DBD5BEC3FAD08 /* Pods-PrographyAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.debug.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5B70C9FDEC50D7741FC7D1 /* Pods-PrographyAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrographyAssignment.release.xcconfig"; path = "Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		A833676E2B6A1B7700E0A844 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		A83367702B6A219300E0A844 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		A83367732B6A2AD700E0A844 /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		A83367742B6A2D2600E0A844 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		A833677D2B6A49B900E0A844 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8A7E06C2B67918900D015E5 /* PrographyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrographyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7E06F2B67918900D015E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A7E0712B67918900D015E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 		A8A7E07D2B67918A00D015E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8A7E0832B67A1F900D015E5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A8A7E0852B67A28C00D015E5 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrographyAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,12 +46,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2760D6F2EC8B09376B607EC8 /* Pods_PrographyAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3099686DF543D8CB7537ACED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD89F4A5A42FAEAD85FE1949 /* Pods_PrographyAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A636C5C0EA47DA2F0A38E39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2022FBB8CC3DBD5BEC3FAD08 /* Pods-PrographyAssignment.debug.xcconfig */,
+				3A5B70C9FDEC50D7741FC7D1 /* Pods-PrographyAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A833676D2B69FE5100E0A844 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +107,22 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		A833677C2B6A497700E0A844 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A833677D2B6A49B900E0A844 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A8A7E0632B67918800D015E5 = {
 			isa = PBXGroup;
 			children = (
 				A83367732B6A2AD700E0A844 /* Secret.xcconfig */,
 				A8A7E06E2B67918900D015E5 /* PrographyAssignment */,
 				A8A7E06D2B67918900D015E5 /* Products */,
+				7A636C5C0EA47DA2F0A38E39 /* Pods */,
+				3099686DF543D8CB7537ACED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +149,7 @@
 		A8A7E0872B67A6EB00D015E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A833677C2B6A497700E0A844 /* ViewModel */,
 				A8A7E0832B67A1F900D015E5 /* TabBarController.swift */,
 				A8A7E0732B67918900D015E5 /* HomeViewController.swift */,
 				A8A7E0852B67A28C00D015E5 /* CardViewController.swift */,
@@ -128,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A7E0802B67918A00D015E5 /* Build configuration list for PBXNativeTarget "PrographyAssignment" */;
 			buildPhases = (
+				5C84E5DF8BF20934159EE621 /* [CP] Check Pods Manifest.lock */,
 				A8A7E0682B67918900D015E5 /* Sources */,
 				A8A7E0692B67918900D015E5 /* Frameworks */,
 				A8A7E06A2B67918900D015E5 /* Resources */,
+				A76D578EC14638D9C236C619 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,12 +224,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C84E5DF8BF20934159EE621 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrographyAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A76D578EC14638D9C236C619 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrographyAssignment/Pods-PrographyAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8A7E0682B67918900D015E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A8A7E0742B67918900D015E5 /* HomeViewController.swift in Sources */,
+				A833677E2B6A49B900E0A844 /* HomeViewModel.swift in Sources */,
 				A8A7E0842B67A1F900D015E5 /* TabBarController.swift in Sources */,
 				A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */,
 				A8A7E0862B67A28C00D015E5 /* CardViewController.swift in Sources */,
