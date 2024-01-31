@@ -9,25 +9,27 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    private let homeTab: UIViewController = {
+    private lazy var homeTab: UINavigationController = {
         let viewController = HomeViewController()
         viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage.house, selectedImage: UIImage.house)
         viewController.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 20, bottom: -10, right: -20)
+        setNavigationItem(viewController: viewController)
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }()
     
-    private let cardTab: UIViewController = {
+    private lazy var cardTab: UINavigationController = {
         let viewController = CardViewController()
         viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage.cards, selectedImage: UIImage.cards)
         viewController.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: -20, bottom: -10, right: 20)
+        setNavigationItem(viewController: viewController)
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = [homeTab, cardTab]
+        
         setTabBar()
     }
     
@@ -47,6 +49,12 @@ private extension TabBarController {
         tabBar.tintColor = UIColor.white
         tabBar.unselectedItemTintColor = UIColor.init(white: 1, alpha: 0.5)
         tabBar.isHidden = false
+        viewControllers = [homeTab, cardTab]
+    }
+    
+    func setNavigationItem(viewController: UIViewController) {
+        let logoImage = UIImage.prographyLogo
+        viewController.navigationItem.titleView = UIImageView(image: logoImage)
     }
     
 }

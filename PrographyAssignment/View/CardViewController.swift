@@ -12,6 +12,23 @@ final class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+        setNavigationBarBackground()
+    }
+
+
+}
+
+extension CardViewController {
+    
+    func setUI() {
+        view.backgroundColor = .white
+    }
+    
+    func setNavigationBarBackground() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
 }
