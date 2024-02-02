@@ -27,3 +27,14 @@
 2. 위 에러를 해결한 후 위와 같은 에러 발생
 ![image](https://github.com/k2645/Prography_Assignment/assets/62226667/3d5bd3e6-1444-4a90-aa9a-0b6c37e40627)
 - Target - Build Settings - Build Options - User Script Sandboxing - No로 설정
+
+## `UICollectionViewCompositionalLayout`의 Dynamic Height 적용
+
+### Trouble Shooting
+- 사진 크기에 따른 Dynamic Height가 적용되지 않는 이슈 발생
+
+## TabBar 색상 고정
+
+### Trouble Shooting
+- Collection View를 scroll하는 경우 하단 TabBar의 색이 변경되는 이슈 발생
+  - `tabBar.barTintColor` 와 `tabBar.isTranslucent = false` 설정
