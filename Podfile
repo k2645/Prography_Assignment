@@ -9,6 +9,7 @@ target 'PrographyAssignment' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

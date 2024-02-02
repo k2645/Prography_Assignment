@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Codable {
+struct Photo: Codable, Hashable {
 
     let identifier: String
     let height: Int
@@ -17,6 +17,10 @@ struct Photo: Codable {
     let user: User
     let urls: URLKind
     let links: LinkKind
+    
+    var imageRatio: CGFloat {
+        return CGFloat(height) / CGFloat(width)
+    }
 
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -29,7 +33,7 @@ struct Photo: Codable {
         case links
     }
     
-    struct URLKind: Codable {
+    struct URLKind: Codable, Hashable {
         let raw: String
         let full: String
         let regular: String
@@ -37,7 +41,7 @@ struct Photo: Codable {
         let thumb: String
     }
 
-    struct LinkKind: Codable {
+    struct LinkKind: Codable, Hashable {
         let own: String
         let html: String
         let download: String
@@ -51,7 +55,7 @@ struct Photo: Codable {
         }
     }
     
-    struct User: Codable {
+    struct User: Codable, Hashable {
         let name: String
     }
     
