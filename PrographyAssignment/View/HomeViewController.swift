@@ -59,6 +59,7 @@ final class HomeViewController: UIViewController {
     
     private let viewModel: HomeViewModel
     private let disposeBag = DisposeBag()
+    private var pageNum = 0
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -76,7 +77,7 @@ final class HomeViewController: UIViewController {
         setNavigationBarBackground()
         addComponents()
         addConstraints()
-        updatePhotos()
+        fetchPhotos()
         bind()
     }
 
@@ -111,18 +112,26 @@ private extension HomeViewController {
 
 private extension HomeViewController {
     
-    func updatePhotos() {
-        viewModel.fetchPhotos()
+    func fetchPhotos() {
+        viewModel.fetchPhotos(pageNum: 0)
     }
     
     func bind() {
-        viewModel.cellContentsOutput
+        viewModel.fetchImageContentsOutput
             .observe(on: MainScheduler())
             .subscribe { [weak self] content in
-                var snapshot = NSDiffableDataSourceSnapshot<Section, PhotoCellContents>()
-                snapshot.appendSections([.Photos])
-                snapshot.appendItems(content, toSection: Section.Photos)
-                self?.dataSource.apply(snapshot)
+                guard let self = self else { return }
+                if pageNum == 0 {
+                    var snapshot = NSDiffableDataSourceSnapshot<Section, PhotoCellContents>()
+                    snapshot.appendSections([.Photos])
+                    snapshot.appendItems(content, toSection: Section.Photos)
+                    dataSource.apply(snapshot)
+                } else {
+                    var snapshot = dataSource.snapshot()
+                    snapshot.appendItems(content, toSection: Section.Photos)
+                    dataSource.apply(snapshot)
+                    photoCollectionView.refreshControl?.endRefreshing()
+                }
             }
             .disposed(by: disposeBag)
     }
@@ -154,6 +163,16 @@ extension HomeViewController: UICollectionViewDelegate {
         section.interGroupSpacing = CGFloat(10)
         
         return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+
+        if maximumOffset < currentOffset {
+            pageNum += 1
+            viewModel.fetchPhotos(pageNum: pageNum)
+        }
     }
     
 }

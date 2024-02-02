@@ -13,12 +13,12 @@ protocol HomeViewModel: HomeViewModelInput, HomeViewModelOutput {
 
 protocol HomeViewModelInput {
     
-    func fetchPhotos()
+    func fetchPhotos(pageNum: Int)
     
 }
 
 protocol HomeViewModelOutput {
     
-    var cellContentsOutput: PublishRelay<[PhotoCellContents]> { get }
+    var fetchImageContentsOutput: PublishRelay<[PhotoCellContents]> { get }
     
 }

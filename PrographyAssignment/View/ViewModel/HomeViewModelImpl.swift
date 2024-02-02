@@ -10,14 +10,11 @@ import RxRelay
 
 final class HomeViewModelImpl: HomeViewModel {
     
-    var cellContentsOutput = PublishRelay<[PhotoCellContents]>()
+    var fetchImageContentsOutput = PublishRelay<[PhotoCellContents]>()
     
     private let disposeBag = DisposeBag()
     
-    private var pageNum = 0
-    private var photos: [Photo] = []
-    
-    func fetchPhotos() {
+    func fetchPhotos(pageNum: Int) {
         UnsplashAPI.fetchPhotos(pageNum: pageNum + 1) { [weak self] data, response, error in
             guard let _ = response as? HTTPURLResponse,
                   let data = data else { return }
@@ -30,7 +27,7 @@ final class HomeViewModelImpl: HomeViewModel {
                           let cellData = configureCellData(photo: photo) else { return }
                     photoCellContents.append(cellData)
                 }
-                self?.cellContentsOutput.accept(photoCellContents)
+                self?.fetchImageContentsOutput.accept(photoCellContents)
             } catch {
                 print(error.localizedDescription)
             }

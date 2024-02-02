@@ -46,9 +46,11 @@ private extension TabBarController {
     
     func setTabBar() {
         tabBar.backgroundColor = UIColor.tabBarBackground
+        tabBar.barTintColor = UIColor.tabBarBackground
         tabBar.tintColor = UIColor.white
         tabBar.unselectedItemTintColor = UIColor.init(white: 1, alpha: 0.5)
         tabBar.isHidden = false
+        tabBar.isTranslucent = false
         viewControllers = [homeTab, cardTab]
     }
     
