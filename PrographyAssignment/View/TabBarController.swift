@@ -10,7 +10,7 @@ import UIKit
 final class TabBarController: UITabBarController {
     
     private lazy var homeTab: UINavigationController = {
-        let viewController = HomeViewController()
+        let viewController = HomeViewController(viewModel: HomeViewModelImpl())
         viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage.house, selectedImage: UIImage.house)
         viewController.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 20, bottom: -10, right: -20)
         setNavigationItem(viewController: viewController)

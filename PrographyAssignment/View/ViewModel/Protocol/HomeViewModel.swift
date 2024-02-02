@@ -1,0 +1,24 @@
+//
+//  HomeViewModel.swift
+//  PrographyAssignment
+//
+//  Created by 김영현 on 2/1/24.
+//
+
+import RxRelay
+
+protocol HomeViewModel: HomeViewModelInput, HomeViewModelOutput {
+    
+}
+
+protocol HomeViewModelInput {
+    
+    func fetchPhotos()
+    
+}
+
+protocol HomeViewModelOutput {
+    
+    var cellContentsOutput: PublishRelay<[PhotoCellContents]> { get }
+    
+}
