@@ -16,42 +16,21 @@ final class HomeViewController: UIViewController {
         case Photos
     }
     
-    private lazy var dataSource: PhotosDataSource = PhotosDataSource(
-        collectionView: photoCollectionView) { [weak self] (collectionView, indexPath, photoCellContents) in
-            guard let cell = self?.photoCollectionView.dequeueReusableCell(
-                withReuseIdentifier: PhotoCollectionViewCell.identifier,
-                for: indexPath
-            ) as? PhotoCollectionViewCell else {
-                return PhotoCollectionViewCell()
-            }
-            cell.configureCell(photoCellContents: photoCellContents)
-            
-            return cell
-        }
-    
-    private lazy var photoStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [photoLabel, photoCollectionView])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        
-        return stackView
-    }()
-    
-    private let photoLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "최신 이미지"
-        label.textColor = .black
-        label.font = UIFont.pretendard(size: 20, weight: .bold)
-        
-        return label
-    }()
+    private lazy var dataSource = createDataSource()
     
     private lazy var photoCollectionView: UICollectionView = {
         let layout = createCollectionViewLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
+        collectionView.register(
+            PhotoCollectionViewCell.self,
+            forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier
+        )
+        collectionView.register(
+            PhotoHeaderCell.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: PhotoHeaderCell.identifier
+        )
         collectionView.delegate = self
         
         return collectionView
@@ -140,6 +119,30 @@ private extension HomeViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     
+    func createDataSource() -> PhotosDataSource {
+        let dataSource = PhotosDataSource(
+            collectionView: photoCollectionView) { (collectionView, indexPath, photoCellContents) in
+                guard let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: PhotoCollectionViewCell.identifier,
+                    for: indexPath
+                ) as? PhotoCollectionViewCell else {
+                    return PhotoCollectionViewCell()
+                }
+                cell.configureCell(photoCellContents: photoCellContents)
+                
+                return cell
+            }
+        dataSource.supplementaryViewProvider = { (collectionView, kind, indexPath) in
+            return collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionHeader,
+                withReuseIdentifier: PhotoHeaderCell.identifier,
+                for: indexPath
+            ) as? PhotoHeaderCell
+        }
+        
+        return dataSource
+    }
+        
     func createCollectionViewLayout() -> UICollectionViewCompositionalLayout {
 
         let itemSize = NSCollectionLayoutSize(
@@ -161,6 +164,16 @@ extension HomeViewController: UICollectionViewDelegate {
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = CGFloat(10)
+        
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(46))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [header]
         
         return UICollectionViewCompositionalLayout(section: section)
     }

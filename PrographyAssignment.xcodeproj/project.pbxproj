@@ -25,6 +25,7 @@
 		A83367A32B6A8A7500E0A844 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367A22B6A8A7500E0A844 /* UIFont+.swift */; };
 		A83367AE2B6B6B7500E0A844 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367AD2B6B6B7500E0A844 /* HomeViewModel.swift */; };
 		A83367B02B6B6F0100E0A844 /* PhotoCellContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367AF2B6B6F0100E0A844 /* PhotoCellContents.swift */; };
+		A83367B42B6D4EC200E0A844 /* PhotoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83367B32B6D4EC200E0A844 /* PhotoHeaderCell.swift */; };
 		A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E06F2B67918900D015E5 /* AppDelegate.swift */; };
 		A8A7E0722B67918900D015E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0712B67918900D015E5 /* SceneDelegate.swift */; };
 		A8A7E0742B67918900D015E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7E0732B67918900D015E5 /* HomeViewController.swift */; };
@@ -57,6 +58,7 @@
 		A83367A22B6A8A7500E0A844 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		A83367AD2B6B6B7500E0A844 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A83367AF2B6B6F0100E0A844 /* PhotoCellContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellContents.swift; sourceTree = "<group>"; };
+		A83367B32B6D4EC200E0A844 /* PhotoHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHeaderCell.swift; sourceTree = "<group>"; };
 		A8A7E06C2B67918900D015E5 /* PrographyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrographyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7E06F2B67918900D015E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A7E0712B67918900D015E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				A83367812B6A85A400E0A844 /* PhotoCollectionViewCell.swift */,
 				A83367832B6A85CB00E0A844 /* BookMarkCollectionViewCell.swift */,
+				A83367B32B6D4EC200E0A844 /* PhotoHeaderCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				A8A7E0842B67A1F900D015E5 /* TabBarController.swift in Sources */,
 				A83367A32B6A8A7500E0A844 /* UIFont+.swift in Sources */,
 				A8A7E0702B67918900D015E5 /* AppDelegate.swift in Sources */,
+				A83367B42B6D4EC200E0A844 /* PhotoHeaderCell.swift in Sources */,
 				A8A7E0862B67A28C00D015E5 /* CardViewController.swift in Sources */,
 				A83367842B6A85CB00E0A844 /* BookMarkCollectionViewCell.swift in Sources */,
 				A83367AE2B6B6B7500E0A844 /* HomeViewModel.swift in Sources */,
