@@ -19,7 +19,7 @@ final class CardViewController: UIViewController {
 
 }
 
-extension CardViewController {
+private extension CardViewController {
     
     func setUI() {
         view.backgroundColor = .white
